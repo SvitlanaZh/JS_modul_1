@@ -23,7 +23,14 @@ function pow (a, z) {
     return 1 / result;
 }
 
-var a = prompt('Put a');
-var z = prompt('Put z');
+var a = prompt('Put a', '');
+var z = prompt('Put z', '');
 
-console.log('result = ' + pow(a,z));
+if (isNaN(a) || isNaN(z)){
+    console.log('Incorrected value!Put the number!');
+} else if ((a % 1 !=0) || (z % 1 !=0)) {
+    console.log('Incorrected value!Put the integer number!');
+}
+else {
+    console.log('result = ' + pow(a,z));
+}
